@@ -26,24 +26,19 @@ export const NavBar = (props: NavBarCustomProps) => {
 
   const appConfig = app ? configApps[app] : configApps['panel-admin']
 
-  const colorApp = appConfig.color
   const nameApp = appConfig.name
 
   return (
     <header
       className={cn(
-        `sticky top-0 z-50 w-full  shadow text-white dark:shadow-secondary`
+        `sticky top-0 z-50 w-full  shadow bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700`
       )}
-      style={{
-        backgroundColor: colorApp
-      }}
     >
       <div className="px-4 sm:px-6 md:px-7 flex h-16 items-center">
         <div className="flex items-center space-x-4 lg:space-x-0 sm:gap-3">
           <SheetMenu title={nameApp} />
           <SidebarToggle isOpen={isOpen} setIsOpen={toggleOpen} />
           <LogoRender
-            nameApp={nameApp}
             href={ADMIN_URLS_APP.HOME.URL_BASE}
             className="w-full max-w-36"
           />
@@ -51,16 +46,6 @@ export const NavBar = (props: NavBarCustomProps) => {
         <div className="flex flex-1 items-center justify-end gap-2">
           {/* <ModeToggle /> */}
           {/*Menu de perfil*/}
-          {/* <ProfilePopover
-            profileData={{
-              names: `${person?.names} ${person?.last_name1} ${person?.last_name2}`,
-              email,
-              photo: person?.photo,
-            }}
-            menuSections={MENU_PROFILE.ADMIN}
-            showProgress={false}
-            showBorders={false}
-          /> */}
           {userData && (
             <ProfilePopover
               profileData={userData}

@@ -7,11 +7,13 @@ export const LogoRender = ({
   nameApp,
   subtitle,
   href,
-  className,
+  urlLink,
+  className
 }: {
   nameApp?: string
   subtitle?: string
   href: string
+  urlLink?: string
   className?: string
 }) => {
   return (
@@ -28,11 +30,11 @@ export const LogoRender = ({
       >
         {!nameApp && (
           <Image
-            src="/brands/postgrado_unap_white.webp"
+            src={urlLink || '/logo-UNAP-color.webp'}
             alt="logo-epg"
-            className="w-52 h-14"
-            width={300}
-            height={40}
+            className="h-11 w-auto"
+            width={1820}
+            height={1420}
           />
         )}
         {nameApp && (
