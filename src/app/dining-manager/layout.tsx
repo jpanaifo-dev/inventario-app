@@ -114,6 +114,23 @@ export default function KitchenManagerLayout({
               submenus: []
             }
           ]
+        },
+        {
+          section: {
+            id: 'section-configuration',
+            name: 'Configuración'
+          },
+          menus: [
+            {
+              menu: {
+                id: 'accounts',
+                name: 'Cuentas',
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            }
+          ]
         }
       ]}
       userData={null}
