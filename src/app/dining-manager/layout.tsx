@@ -1,13 +1,15 @@
 // Layout for Kitchen Manager
 
+import DashboardLayout from '@/components/layouts/DashboardLayout'
+
 export default function KitchenManagerLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
-    <div>
-      <main>{children}</main>
-    </div>
+    <DashboardLayout menuItems={[]} userData={null} menuSections={[]}>
+      {children}
+    </DashboardLayout>
   )
 }

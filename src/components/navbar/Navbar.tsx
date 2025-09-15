@@ -16,7 +16,7 @@ import { ProfilePopover } from './profile-popover'
 
 interface NavBarCustomProps {
   app?: keyof typeof configApps
-  userData: UserNavbar
+  userData: UserNavbar | null
   menuSections?: MenuSection[]
 }
 
@@ -38,16 +38,13 @@ export const NavBar = (props: NavBarCustomProps) => {
         `sticky top-0 z-50 w-full  shadow text-white dark:shadow-secondary`
       )}
       style={{
-        backgroundColor: colorApp,
+        backgroundColor: colorApp
       }}
     >
       <div className="px-4 sm:px-6 md:px-7 flex h-16 items-center">
         <div className="flex items-center space-x-4 lg:space-x-0 sm:gap-3">
           <SheetMenu title={nameApp} />
-          <SidebarToggle
-            isOpen={isOpen}
-            setIsOpen={toggleOpen}
-          />
+          <SidebarToggle isOpen={isOpen} setIsOpen={toggleOpen} />
           <LogoRender
             nameApp={nameApp}
             href={ADMIN_URLS_APP.HOME.URL_BASE}
@@ -67,10 +64,12 @@ export const NavBar = (props: NavBarCustomProps) => {
             showProgress={false}
             showBorders={false}
           /> */}
-          <ProfilePopover
-            profileData={userData}
-            menuSections={menuSections}
-          />
+          {userData && (
+            <ProfilePopover
+              profileData={userData}
+              menuSections={menuSections}
+            />
+          )}
         </div>
       </div>
     </header>

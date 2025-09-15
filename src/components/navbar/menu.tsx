@@ -11,13 +11,11 @@ import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-  TooltipProvider,
+  TooltipProvider
 } from '@/components/ui/tooltip'
-import { MenuConfigApps } from '@/config/configApp'
 import { SectionElement } from '@/types/sidebar'
 
 interface MenuProps {
-  app?: MenuConfigApps
   isOpen: boolean | undefined
   menuItems?: SectionElement[]
 }
@@ -33,10 +31,7 @@ export function Menu({ isOpen, menuItems }: MenuProps) {
           {menuList
             ?.filter(({ menus }) => menus.length > 0)
             .map(({ section, menus }, index) => (
-              <li
-                className={cn('w-full', section ? 'pt-5' : '')}
-                key={index}
-              >
+              <li className={cn('w-full', section ? 'pt-5' : '')} key={index}>
                 {(isOpen && section) || isOpen === undefined ? (
                   <p className="text-sm font-medium text-gray-400 px-4 pb-2 max-w-[248px] truncate">
                     {section?.name}
@@ -60,10 +55,7 @@ export function Menu({ isOpen, menuItems }: MenuProps) {
                 {menus.map(({ menu, submenus }, index) => {
                   const isActive = (href: string) => pathname === href
                   return !submenus || submenus.length === 0 ? (
-                    <div
-                      className="w-full"
-                      key={index}
-                    >
+                    <div className="w-full" key={index}>
                       <TooltipProvider disableHoverableContent>
                         <Tooltip delayDuration={100}>
                           <TooltipTrigger asChild>
@@ -94,7 +86,7 @@ export function Menu({ isOpen, menuItems }: MenuProps) {
                                             : 'text-gray-300'
                                         )}
                                         dangerouslySetInnerHTML={{
-                                          __html: menu.icon,
+                                          __html: menu.icon
                                         }}
                                       />
                                     )}
@@ -122,10 +114,7 @@ export function Menu({ isOpen, menuItems }: MenuProps) {
                       </TooltipProvider>
                     </div>
                   ) : (
-                    <div
-                      className="w-full"
-                      key={index}
-                    >
+                    <div className="w-full" key={index}>
                       <CollapseMenuButton
                         icon={`${menu.icon}`}
                         label={menu.name}
