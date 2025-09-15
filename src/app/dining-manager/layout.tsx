@@ -70,6 +70,23 @@ export default function KitchenManagerLayout({
               submenus: []
             }
           ]
+        },
+        {
+          section: {
+            id: 'section-2',
+            name: 'Reportes'
+          },
+          menus: [
+            {
+              menu: {
+                id: 'menu-5',
+                name: 'Reportes',
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            }
+          ]
         }
       ]}
       userData={null}
