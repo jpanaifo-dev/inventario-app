@@ -12,7 +12,7 @@ export interface SubmenuElement {
   id: string
   name: string
   description?: string
-  icon: null | string
+  icon: null | string | React.ElementType
   url: null | string
 }
 

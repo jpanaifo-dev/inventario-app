@@ -1,16 +1,32 @@
-export const menu = [
+import { SectionElement } from '@/types/sidebar'
+import {
+  ClipboardList,
+  FileText,
+  Package,
+  LogIn,
+  LogOut,
+  Box,
+  Warehouse,
+  Truck,
+  Users,
+  Settings
+} from 'lucide-react'
+
+const BASE_PATH = '/dining-manager'
+
+export const menuDiningManager: SectionElement[] = [
   {
     section: {
-      id: 'section-1',
-      name: 'Gestion'
+      id: 'section-management',
+      name: 'Management'
     },
     menus: [
       {
         menu: {
-          id: 'menu-1',
+          id: 'menu-pecosas',
           name: 'Pecosas',
-          url: '#',
-          icon: null
+          url: `${BASE_PATH}/pecosas`,
+          icon: ClipboardList
         },
         submenus: []
       }
@@ -18,43 +34,43 @@ export const menu = [
   },
   {
     section: {
-      id: 'section-1',
-      name: 'Seguimiento'
+      id: 'section-tracking',
+      name: 'Tracking'
     },
     menus: [
       {
         menu: {
-          id: 'menu-1',
-          name: 'Solicitudes',
-          url: '#',
-          icon: null
+          id: 'menu-requests',
+          name: 'Requests',
+          url: `${BASE_PATH}/requests`,
+          icon: FileText
         },
         submenus: []
       },
       {
         menu: {
-          id: 'menu-2',
-          name: 'Inventario',
-          url: '#',
-          icon: null
+          id: 'menu-inventory',
+          name: 'Inventory',
+          url: `${BASE_PATH}/inventory`,
+          icon: Package
         },
         submenus: []
       },
       {
         menu: {
-          id: 'menu-3',
-          name: 'Ingresos',
-          url: '#',
-          icon: null
+          id: 'menu-income',
+          name: 'Income',
+          url: `${BASE_PATH}/income`,
+          icon: LogIn
         },
         submenus: []
       },
       {
         menu: {
-          id: 'menu-4',
-          name: 'Salidas',
-          url: '#',
-          icon: null
+          id: 'menu-outcomes',
+          name: 'Outcomes',
+          url: `${BASE_PATH}/outcomes`,
+          icon: LogOut
         },
         submenus: []
       }
@@ -62,43 +78,43 @@ export const menu = [
   },
   {
     section: {
-      id: 'section-registers',
-      name: 'Registros'
+      id: 'section-records',
+      name: 'Records'
     },
     menus: [
       {
         menu: {
-          id: 'menu-5',
-          name: 'Productos',
-          url: '#',
-          icon: null
+          id: 'menu-products',
+          name: 'Products',
+          url: `${BASE_PATH}/products`,
+          icon: Box
         },
         submenus: []
       },
       {
         menu: {
-          id: 'menu-6',
-          name: 'Almacenes',
-          url: '#',
-          icon: null
+          id: 'menu-warehouses',
+          name: 'Warehouses',
+          url: `${BASE_PATH}/warehouses`,
+          icon: Warehouse
         },
         submenus: []
       },
       {
         menu: {
-          id: 'menu-7',
-          name: 'Proveedores',
-          url: '#',
-          icon: null
+          id: 'menu-suppliers',
+          name: 'Suppliers',
+          url: `${BASE_PATH}/suppliers`,
+          icon: Truck
         },
         submenus: []
       },
       {
         menu: {
-          id: 'menu-8',
-          name: 'Usuarios',
-          url: '#',
-          icon: null
+          id: 'menu-users',
+          name: 'Users',
+          url: `${BASE_PATH}/users`,
+          icon: Users
         },
         submenus: []
       }
@@ -107,15 +123,15 @@ export const menu = [
   {
     section: {
       id: 'section-configuration',
-      name: 'Configuración'
+      name: 'Configuration'
     },
     menus: [
       {
         menu: {
-          id: 'accounts',
-          name: 'Cuentas',
-          url: '#',
-          icon: null
+          id: 'menu-accounts',
+          name: 'Accounts',
+          url: `${BASE_PATH}/accounts`,
+          icon: Settings
         },
         submenus: []
       }
