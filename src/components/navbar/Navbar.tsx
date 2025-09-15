@@ -1,18 +1,15 @@
 'use client'
-import { ModeToggle } from './mode-toggle'
 import { SidebarToggle } from './sidebar-toggle'
 import { useStore } from 'zustand'
 import { useSidebar } from '@/hooks'
 import { SheetMenu } from './sheet-menu'
 import { configApps } from '@/config/configApp'
 import { cn } from '@/lib/utils'
-// import { IPerson } from '@/types'
-// import { ProfilePopover } from '@/modules/app'
-// import { MENU_PROFILE } from '@/config/urls-data/profile-menu'
 import { LogoRender } from '../miscellaneous/logo-render'
 import { ADMIN_URLS_APP } from '@/config/configUrl'
 import { MenuSection, UserNavbar } from '@/types/sidebar'
 import { ProfilePopover } from './profile-popover'
+// import { ModeToggle } from './mode-toggle'
 
 interface NavBarCustomProps {
   app?: keyof typeof configApps
@@ -52,7 +49,7 @@ export const NavBar = (props: NavBarCustomProps) => {
           />
         </div>
         <div className="flex flex-1 items-center justify-end gap-2">
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           {/*Menu de perfil*/}
           {/* <ProfilePopover
             profileData={{
