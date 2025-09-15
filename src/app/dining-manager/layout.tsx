@@ -21,7 +21,7 @@ export default function KitchenManagerLayout({
                 id: 'menu-1',
                 name: 'Pecosas',
                 url: '#',
-                icon: null // Puedes usar cualquier icono disponible en tu biblioteca de iconos
+                icon: null
               },
               submenus: []
             }
@@ -73,14 +73,41 @@ export default function KitchenManagerLayout({
         },
         {
           section: {
-            id: 'section-2',
-            name: 'Reportes'
+            id: 'section-registers',
+            name: 'Registros'
           },
           menus: [
             {
               menu: {
                 id: 'menu-5',
-                name: 'Reportes',
+                name: 'Productos',
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            },
+            {
+              menu: {
+                id: 'menu-6',
+                name: 'Almacenes',
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            },
+            {
+              menu: {
+                id: 'menu-7',
+                name: 'Proveedores',
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            },
+            {
+              menu: {
+                id: 'menu-8',
+                name: 'Usuarios',
                 url: '#',
                 icon: null
               },
