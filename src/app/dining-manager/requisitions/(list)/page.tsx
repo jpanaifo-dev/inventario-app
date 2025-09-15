@@ -9,6 +9,21 @@ export default function Page() {
           subtitle="Total de PECOSAs en el sistema"
           value={2}
         />
+        <StatsCard
+          title="Pendientes"
+          subtitle="Total de PECOSAs en el sistema"
+          value={32}
+        />
+        <StatsCard
+          title="Inconformidades"
+          subtitle="Total de PECOSAs en el sistema"
+          value={44}
+        />
+        <StatsCard
+          title="Completadas"
+          subtitle="Total de PECOSAs en el sistema"
+          value={19}
+        />
       </div>
     </div>
   )
