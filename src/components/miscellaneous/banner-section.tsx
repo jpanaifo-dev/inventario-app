@@ -18,7 +18,7 @@ export function BannerSection({
   return (
     <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 flex items-center justify-between">
       <div className="flex-1">
-        <h1 className="text-xl font-semibold text-gray-900 mb-2">{title}</h1>
+        <h1 className="text-2xl font-semibold text-gray-900 mb-2">{title}</h1>
         <p className="text-gray-600 text-sm leading-relaxed max-w-3xl">
           {description}
         </p>

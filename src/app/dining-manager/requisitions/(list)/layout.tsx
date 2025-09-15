@@ -9,7 +9,11 @@ export default function Layout(props: LayoutProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      <BannerSection title="Gestión de Pecosas" />
+      <BannerSection
+        title="Gestión de Pecosas"
+        description="Desde este módulo podrás registrar nuevas PECOSAs, actualizarlas y acceder a su historial para un seguimiento detallado."
+        buttonText="Registrar Nueva PECOSA"
+      />
       {children}
     </div>
   )
