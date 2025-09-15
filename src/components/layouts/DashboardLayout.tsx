@@ -1,9 +1,13 @@
+'use client'
 // DashboardLayout: layout configurable para dashboard de cualquier rol
 import React from 'react'
 import { NavBar } from '../navbar/Navbar'
 import { MenuSection, UserNavbar } from '@/types/sidebar'
 import { SideBar } from '../navbar/Sidebar'
 import { SectionElement } from '@/types/sidebar'
+import { cn } from '@/lib/utils'
+import { useStore } from '@/hooks/use-store'
+import { useSidebar } from '@/hooks'
 
 interface DashboardLayoutProps {
   userData: UserNavbar | null
@@ -19,13 +23,32 @@ export default function DashboardLayout({
   menuItems,
   children
 }: DashboardLayoutProps) {
+  const sidebar = useStore(useSidebar, (x) => x)
+  if (!sidebar) return null
+  const { getOpenState, settings } = sidebar
   return (
-    <div className="dashboard-layout">
+    <>
       <NavBar menuSections={menuSections} userData={userData} />
-      <div className="dashboard-content">
-        <SideBar menuItems={menuItems} />
-        <div className="dashboard-main">{children}</div>
-      </div>
-    </div>
+      <SideBar menuItems={menuItems} />
+      <section
+        className={cn(
+          'min-h-[calc(100vh_-_56px)] bg-zinc-50 dark:bg-zinc-900 transition-[margin-left] ease-in-out duration-300 relative',
+          !settings.disabled && (!getOpenState() ? 'lg:ml-[90px]' : 'lg:ml-72')
+        )}
+      >
+        <section className="px-4 py-3 bg-gray-100 sticky top-14 z-20">
+          {/* <BreadcrumbCustom /> */}
+        </section>
+        <main className="w-full container">{children}</main>
+      </section>
+      <footer
+      // className={cn(
+      //   'transition-[margin-left] ease-in-out duration-300',
+      //   !settings.disabled && (!getOpenState() ? 'lg:ml-[90px]' : 'lg:ml-72')
+      // )}
+      >
+        {/* <Footer /> */}
+      </footer>
+    </>
   )
 }
