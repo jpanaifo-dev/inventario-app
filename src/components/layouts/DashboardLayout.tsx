@@ -40,9 +40,7 @@ export default function DashboardLayout({
         {/* <section className="px-4 py-3 bg-gray-100 sticky top-14 z-20"> */}
         {/* <BreadcrumbCustom /> */}
         {/* </section> */}
-        <main className="w-full container mx-auto p-4 md:p-6">
-          {children}
-        </main>
+        <main className="w-full container mx-auto p-4 md:p-6">{children}</main>
       </section>
       <div
         className={cn(

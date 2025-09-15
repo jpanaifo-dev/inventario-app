@@ -1,4 +1,4 @@
-import { SectionElement } from '@/types/sidebar'
+'use client'
 import {
   ClipboardList,
   FileText,
@@ -14,18 +14,18 @@ import {
 
 const BASE_PATH = '/dining-manager'
 
-export const menuDiningManager: SectionElement[] = [
+export const menuDiningManager = [
   {
     section: {
-      id: 'section-management',
-      name: 'Management'
+      id: 'seccion-gestion',
+      name: 'Gestión'
     },
     menus: [
       {
         menu: {
           id: 'menu-pecosas',
           name: 'Pecosas',
-          url: `${BASE_PATH}/pecosas`,
+          url: `${BASE_PATH}/requisitions`,
           icon: ClipboardList
         },
         submenus: []
@@ -34,14 +34,14 @@ export const menuDiningManager: SectionElement[] = [
   },
   {
     section: {
-      id: 'section-tracking',
-      name: 'Tracking'
+      id: 'seccion-seguimiento',
+      name: 'Seguimiento'
     },
     menus: [
       {
         menu: {
-          id: 'menu-requests',
-          name: 'Requests',
+          id: 'menu-solicitudes',
+          name: 'Solicitudes',
           url: `${BASE_PATH}/requests`,
           icon: FileText
         },
@@ -49,8 +49,8 @@ export const menuDiningManager: SectionElement[] = [
       },
       {
         menu: {
-          id: 'menu-inventory',
-          name: 'Inventory',
+          id: 'menu-inventario',
+          name: 'Inventario',
           url: `${BASE_PATH}/inventory`,
           icon: Package
         },
@@ -58,8 +58,8 @@ export const menuDiningManager: SectionElement[] = [
       },
       {
         menu: {
-          id: 'menu-income',
-          name: 'Income',
+          id: 'menu-ingresos',
+          name: 'Ingresos',
           url: `${BASE_PATH}/income`,
           icon: LogIn
         },
@@ -67,8 +67,8 @@ export const menuDiningManager: SectionElement[] = [
       },
       {
         menu: {
-          id: 'menu-outcomes',
-          name: 'Outcomes',
+          id: 'menu-egresos',
+          name: 'Egresos',
           url: `${BASE_PATH}/outcomes`,
           icon: LogOut
         },
@@ -78,14 +78,14 @@ export const menuDiningManager: SectionElement[] = [
   },
   {
     section: {
-      id: 'section-records',
-      name: 'Records'
+      id: 'seccion-registros',
+      name: 'Registros'
     },
     menus: [
       {
         menu: {
-          id: 'menu-products',
-          name: 'Products',
+          id: 'menu-productos',
+          name: 'Productos',
           url: `${BASE_PATH}/products`,
           icon: Box
         },
@@ -93,8 +93,8 @@ export const menuDiningManager: SectionElement[] = [
       },
       {
         menu: {
-          id: 'menu-warehouses',
-          name: 'Warehouses',
+          id: 'menu-almacenes',
+          name: 'Almacenes',
           url: `${BASE_PATH}/warehouses`,
           icon: Warehouse
         },
@@ -102,8 +102,8 @@ export const menuDiningManager: SectionElement[] = [
       },
       {
         menu: {
-          id: 'menu-suppliers',
-          name: 'Suppliers',
+          id: 'menu-proveedores',
+          name: 'Proveedores',
           url: `${BASE_PATH}/suppliers`,
           icon: Truck
         },
@@ -111,8 +111,8 @@ export const menuDiningManager: SectionElement[] = [
       },
       {
         menu: {
-          id: 'menu-users',
-          name: 'Users',
+          id: 'menu-usuarios',
+          name: 'Usuarios',
           url: `${BASE_PATH}/users`,
           icon: Users
         },
@@ -122,14 +122,14 @@ export const menuDiningManager: SectionElement[] = [
   },
   {
     section: {
-      id: 'section-configuration',
-      name: 'Configuration'
+      id: 'seccion-configuracion',
+      name: 'Configuración'
     },
     menus: [
       {
         menu: {
-          id: 'menu-accounts',
-          name: 'Accounts',
+          id: 'menu-cuentas',
+          name: 'Cuentas',
           url: `${BASE_PATH}/accounts`,
           icon: Settings
         },

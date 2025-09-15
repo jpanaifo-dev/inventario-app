@@ -78,18 +78,16 @@ export function Menu({ isOpen, menuItems }: MenuProps) {
                                       isOpen === false ? '' : 'mr-4'
                                     )}
                                   >
-                                    {menu.icon && (
-                                      <span
-                                        className={cn(
-                                          isActive(menu.url ?? '')
-                                            ? 'text-white'
-                                            : 'text-gray-300'
-                                        )}
-                                        dangerouslySetInnerHTML={{
-                                          __html: menu.icon
-                                        }}
-                                      />
-                                    )}
+                                    {menu.icon &&
+                                      (typeof menu.icon === 'string' ? (
+                                        <img
+                                          src={menu.icon}
+                                          alt={menu.name}
+                                          className="h-5 w-5"
+                                        />
+                                      ) : (
+                                        <menu.icon className="h-5 w-5" />
+                                      ))}
                                   </span>
                                   <p
                                     className={cn(
