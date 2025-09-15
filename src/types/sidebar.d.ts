@@ -9,15 +9,15 @@ export interface MenuElement {
 }
 
 export interface SubmenuElement {
-  id: number
+  id: string
   name: string
-  description: string
+  description?: string
   icon: null | string
   url: null | string
 }
 
 export interface SectionSection {
-  id: number
+  id: string
   name: string
 }
 
