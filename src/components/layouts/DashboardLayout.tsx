@@ -8,6 +8,7 @@ import { SectionElement } from '@/types/sidebar'
 import { cn } from '@/lib/utils'
 import { useStore } from '@/hooks/use-store'
 import { useSidebar } from '@/hooks'
+import { Footer } from './Footer'
 
 interface DashboardLayoutProps {
   userData: UserNavbar | null
@@ -32,23 +33,23 @@ export default function DashboardLayout({
       <SideBar menuItems={menuItems} />
       <section
         className={cn(
-          'min-h-[calc(100vh_-_56px)] bg-zinc-50 dark:bg-zinc-900 transition-[margin-left] ease-in-out duration-300 relative',
+          'min-h-[calc(100vh_-_96px)] bg-zinc-50 dark:bg-zinc-900 transition-[margin-left] ease-in-out duration-300 relative',
           !settings.disabled && (!getOpenState() ? 'lg:ml-[90px]' : 'lg:ml-72')
         )}
       >
-        <section className="px-4 py-3 bg-gray-100 sticky top-14 z-20">
-          {/* <BreadcrumbCustom /> */}
-        </section>
+        {/* <section className="px-4 py-3 bg-gray-100 sticky top-14 z-20"> */}
+        {/* <BreadcrumbCustom /> */}
+        {/* </section> */}
         <main className="w-full container">{children}</main>
       </section>
-      <footer
-      // className={cn(
-      //   'transition-[margin-left] ease-in-out duration-300',
-      //   !settings.disabled && (!getOpenState() ? 'lg:ml-[90px]' : 'lg:ml-72')
-      // )}
+      <div
+        className={cn(
+          'transition-[margin-left] ease-in-out duration-300',
+          !settings.disabled && (!getOpenState() ? 'lg:ml-[90px]' : 'lg:ml-72')
+        )}
       >
-        {/* <Footer /> */}
-      </footer>
+        <Footer />
+      </div>
     </>
   )
 }
