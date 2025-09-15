@@ -29,25 +29,43 @@ export default function KitchenManagerLayout({
         },
         {
           section: {
-            id: 'section-2',
+            id: 'section-1',
             name: 'Seguimiento'
           },
           menus: [
             {
               menu: {
-                id: 'menu-2',
+                id: 'menu-1',
                 name: 'Solicitudes',
-                icon: null,
-                url: '#'
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            },
+            {
+              menu: {
+                id: 'menu-2',
+                name: 'Inventario',
+                url: '#',
+                icon: null
               },
               submenus: []
             },
             {
               menu: {
                 id: 'menu-3',
-                name: 'Inventario',
-                icon: null,
-                url: '#'
+                name: 'Ingresos',
+                url: '#',
+                icon: null
+              },
+              submenus: []
+            },
+            {
+              menu: {
+                id: 'menu-4',
+                name: 'Salidas',
+                url: '#',
+                icon: null
               },
               submenus: []
             }
