@@ -27,6 +27,8 @@ export default function DashboardLayout({
   const sidebar = useStore(useSidebar, (x) => x)
   if (!sidebar) return null
   const { getOpenState, settings } = sidebar
+
+  console.log('userData en DashboardLayout:', userData)
   return (
     <>
       <NavBar menuSections={menuSections} userData={userData} />

@@ -10,8 +10,22 @@ export default function KitchenManagerLayout({
   return (
     <DashboardLayout
       menuItems={menuDiningManager}
-      userData={null}
-      menuSections={[]}
+      userData={{
+        email: 'email@example.com',
+        photo: 'photo_url',
+        username: 'username'
+      }}
+      menuSections={[
+        {
+          items: [
+            {
+              label: 'Perfil',
+              href: '/dining-manager/profile'
+            }
+          ],
+          label: 'Cuenta'
+        }
+      ]}
     >
       {children}
     </DashboardLayout>
